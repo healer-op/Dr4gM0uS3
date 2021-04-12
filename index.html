@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DragMouse - Click Speed Test ⚡</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,700'><link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<link rel="icon" href="fav.png" type="image/gif" sizes="16x16">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main x-data="clickSpeedTest()" x-init="restart()">
+  <header>
+    <p> <span><abbr title="Clicks Per Second">CPS</abbr></span><br/><b x-text="cpsDisplay"></b></p>
+    <div></div>
+    <p> <span>CPS MAX</span><br/><b x-text="cpsMaxDisplay"></b></p>
+  </header>
+  <button x-ref="btn" @mousedown="mouseDown" @mouseup="mouseUp" :style="`--cps: ${cps}`"></button>
+  <footer>
+    <p> <span>Clicks</span><br/><b x-text="clicks"></b></p>
+    <div></div>
+    <p> <span>Time</span><br/><b x-text="activeTimeDisplay"></b><sub>s</sub></p>
+  </footer>
+
+  <p>MineVote.xyz - Created By Healer</p>
+</main>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
